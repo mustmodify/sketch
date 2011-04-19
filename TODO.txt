@@ -1,0 +1,4 @@
+1. Add all SVG elements
+2. Add all attributes to the canvas
+3. Add Element#to_raphael http://raphaeljs.com/
+
