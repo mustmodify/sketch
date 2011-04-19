@@ -1,15 +1,15 @@
 #!/usr/bin/env rake
 
+require 'bundler'
+Bundler::GemHelper.install_tasks
+
 require 'rake'
 require 'rake/testtask'
 
-PACKAGE = 'sketch'
-
-PKG_FILE_NAME      = "#{PACKAGE}-#{VERSION}"
-
 desc "Run unit tests"
 Rake::TestTask.new("test") { |t|
-  t.pattern = 'test/*_test.rb'
+  t.libs << 'test'
+  t.pattern = 'test/*.rb'
   t.verbose = true
   t.warning = true
 }
