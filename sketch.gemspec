@@ -4,7 +4,6 @@ version = File.read(File.expand_path("../sketch.version",__FILE__)).strip
 spec = Gem::Specification.new do |s|
   s.name = 'sketch'
   s.version = version 
-  s.platform = 'Gem::Platform::Ruby'
   s.summary = "build SVG images"
   s.description = "build SVG images"
   s.license = 'MIT'
