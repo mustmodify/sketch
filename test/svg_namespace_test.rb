@@ -1,13 +1,6 @@
-#prerequisites
-require 'nokogiri'
-require 'valuable'
+require 'helper'
 
-# require file being tested
-$: << File.expand_path(File.dirname(__FILE__) + '/../lib/sketch')
-require 'canvas.rb'
-require 'base.rb'
-
-class Minimalist < Sketch::Base
+class Minimalist < Sketch
   def draw( canvas )
   end
 end

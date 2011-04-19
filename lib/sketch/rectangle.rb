@@ -1,0 +1,1 @@
+Sketch::Rectangle = Sketch::Rect

@@ -1,12 +1,4 @@
-#prerequisites
-require 'rubygems'
-require 'test/unit'
-require 'nokogiri'
-require 'valuable'
-
-# require file being tested
-$: << File.expand_path(File.dirname(__FILE__) + '/../lib/sketch')
-require 'canvas.rb'
+require 'helper'
 
 class CanvasTest < Test::Unit::TestCase
 

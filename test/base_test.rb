@@ -1,24 +1,15 @@
-#prerequisites
-require 'rubygems'
-require 'test/unit'
-require 'nokogiri'
-require 'valuable'
+require 'test/helper.rb'
 
-# require file being tested
-$: << File.expand_path(File.dirname(__FILE__) + '/../lib/sketch')
-require 'base.rb'
-require 'canvas.rb'
-
-class EmptySquare < Sketch::Base
-  def draw(canvas)
-    canvas.rect('x' => 50, 'y' => 20, 'width' => 10, 'height' => 20)
-  end
+class Squigly < Sketch::Element
+  has_value :reflective_coating
 end
 
-class BaseTest < Test::Unit::TestCase
+class SketchTest < Test::Unit::TestCase
 
-  def test_that_nodes_are_added_to_the_canvas
-    assert_equal 1, Nokogiri::XML(EmptySquare.new.to_svg).css('rect[x="50"][y="20"][width="10"][height="20"]').size
+  def test_that_node_is_based_on_name
+    canvas = stub
+    canvas.expects(:squigly)
+    Squigly.new.draw(canvas)
   end
 
 end

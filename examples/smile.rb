@@ -1,4 +1,4 @@
-class Smile < Sketch::Base
+class Smile < Sketch
 
 #  def draw( canvas )
 #    circle.new(:id => 'face', :cx => 200, :cy => 200, :r => 195, :fill => "yellow")

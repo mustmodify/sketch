@@ -1,14 +1,6 @@
-#prerequisites
-require 'rubygems'
-require 'nokogiri'
-require 'valuable'
+require 'helper'
 
-# require file being tested
-$: << File.expand_path(File.dirname(__FILE__) + '/../lib/sketch')
-require 'canvas.rb'
-require 'base.rb'
-
-class Minimalist < Sketch::Base
+class Minimalist < Sketch
   def draw( canvas )
   end
 end
@@ -26,7 +18,7 @@ class DoctypeTest < Test::Unit::TestCase
   end
 
   def test_that_it_includes_doctype_when_configured
-    artwork = Minimalist.new.to_svg(:doctype => true)
+    artwork = Minimalist.new(:doctype => true).to_svg
     assert_match(/doctype/i, artwork)
   end
 
