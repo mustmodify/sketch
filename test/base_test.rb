@@ -12,5 +12,16 @@ class SketchTest < Test::Unit::TestCase
     Squigly.new.draw(canvas)
   end
 
+  def test_that_underscores_become_dashes
+    canvas = stub
+    canvas.expects(:squigly).with(has_entry('reflective-coating', 'dark'))
+    Squigly.new(:reflective_coating => 'dark').draw(canvas)
+  end
+
+  def test_that_data_is_added_in_html5_format
+    canvas = stub
+    canvas.expects(:squigly).with('data-visit-id' => 21)
+    Squigly.new(:data => {:visit_id => 21}).draw(canvas)
+  end
 end
 

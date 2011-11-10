@@ -6,6 +6,7 @@ class Sketch < Valuable
   has_value :width
   has_value :baseProfile, :alias => :base_profile
   has_value :doctype
+  has_value :data, :default => {}
 
   def draw(canvas)
     raise NotImplementedError
