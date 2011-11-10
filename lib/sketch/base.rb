@@ -14,7 +14,7 @@ module Sketch::Base
       end
     end
 
-    out[:class] = out.delete(:klass) if out.has_key?(:klass)
+    out['class'] = out.delete('klass') if out.has_key?('klass')
 
     out
   end
