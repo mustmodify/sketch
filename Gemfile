@@ -6,5 +6,6 @@ gemspec
 group :test do
   gem 'test-unit'
   gem 'mocha'
+  gem 'rake'
 end
 
