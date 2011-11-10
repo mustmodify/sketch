@@ -43,6 +43,7 @@ require 'sketch/element'
 require 'sketch/canvas'
 
 require 'sketch/circle'
+require 'sketch/polygon'
 require 'sketch/ellipse'
 require 'sketch/rect'
 require 'sketch/rectangle'
