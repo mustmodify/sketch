@@ -13,5 +13,17 @@ class Sketch::Element < Valuable
   def svg_node
     self.class.name.split('::').last.downcase
   end
+
+  class << self
+    def central_point( x_param = :x, y_param = :y )
+      define_method :point= do |coordinates|
+        attributes[x_param], attributes[y_param] = *coordinates
+      end
+  
+      define_method :point do
+        [attributes[x_param], attributes[y_param]]
+      end
+    end
+  end
 end
 

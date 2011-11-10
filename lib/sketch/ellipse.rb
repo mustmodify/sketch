@@ -9,5 +9,7 @@ class Sketch::Ellipse < Sketch::Element
   has_value :stroke 
   has_value :stroke_width
 
+  central_point :cx, :cy
+
 end
 

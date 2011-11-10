@@ -8,13 +8,7 @@ class Sketch::Circle < Sketch::Element
   has_value :stroke 
   has_value :stroke_width
 
-  def point=(coordinates)
-    self.cx, self.cy = *coordinates
-  end
-
-  def point
-    [self.cx, self.cy]
-  end
+  central_point :cx, :cy
 
 end
 
