@@ -48,4 +48,5 @@ require 'sketch/ellipse'
 require 'sketch/rect'
 require 'sketch/rectangle'
 require 'sketch/path'
+require 'sketch/star'
 
